@@ -35,6 +35,12 @@ const ProjectDetails: React.FC<Props> = ({
       transformOrigin: `${originX}px ${originy}px`,
       ease: Power1.easeOut,
     });
+    gsap.from(".backdrop",{
+      duration:1,
+      opacity:0,
+      ease: Power1.easeOut,
+
+    })
   });
 
   const clickHandler: Function = () => {
@@ -46,6 +52,9 @@ const ProjectDetails: React.FC<Props> = ({
   };
 
   return (
+    <>
+    {/* backdrop css in base */}
+    <div className="backdrop"></div>
     <div ref={detailsRef} className="projectDetails">
       <div className="projectDetails__center">
         <div className="projectDetails__header">
@@ -54,6 +63,7 @@ const ProjectDetails: React.FC<Props> = ({
       <ProjectDetailsBody project={project}/>
       </div>
     </div>
+    </>
   );
 };
 
