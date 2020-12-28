@@ -37,7 +37,7 @@
         &-email {
             position: relative;
             display: flex;
-            align-items: end;
+            align-items: flex-end;
             transition: color 0.3s;
             color: $color-white;
             cursor: pointer;
