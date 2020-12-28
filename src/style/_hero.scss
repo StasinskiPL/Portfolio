@@ -1,0 +1,73 @@
+.hero {
+    position: relative;
+    box-shadow: 0 -2px 20px 4px $color-main;
+    background-image: linear-gradient(to top,
+            #414b64,
+            #353f57,
+            #2a344b,
+            #1f293f,
+            #141f33);
+
+    &__center {
+        height: 100vh;
+        display: grid;
+        align-items: center;
+        @include maxWidth;
+    }
+
+    &__content {
+        &-text {
+            color: $color-text;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 3.5rem;
+            margin-top: -5rem;
+
+            @include mediumSize {
+                font-size: 7rem;
+                line-height: 6.5rem;
+            }
+        }
+
+        &-name {
+            display: block;
+
+            @include mediumSize {
+                margin-left: 2rem;
+            }
+        }
+
+        &-lastName {
+            display: block;
+            word-break: break-all;
+
+            @include mediumSize {
+                margin-left: 8rem;
+            }
+        }
+    }
+
+    &-arrow {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        color: $color-main-light;
+        font-size: 2rem;
+        animation: bounce 3s linear infinite;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.3);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
