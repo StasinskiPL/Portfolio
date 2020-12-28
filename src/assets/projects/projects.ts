@@ -15,14 +15,14 @@ interface Project {
 export const projectsList: Array<Project> = [
   {
     title: "GamesCenter",
-    description: "this is games Center",
+    description: "A few Two players online mini games with real time chat. Created with React and socket.io ",
     link: "https://gamescenter-ds.herokuapp.com/",
     githubLink: "https://github.com/StasinskiPL/GamesCenter",
     image: GamesCenterImg,
   },
   {
     title: "Library",
-    description: "Library",
+    description: "Online Library. Created with React , firebase and firebase Authentication.",
     link: "https://miejska-biblioteka.netlify.app/",
     githubLink: "https://github.com/StasinskiPL/Biblioteka",
     image: LibraryImg,
@@ -30,7 +30,7 @@ export const projectsList: Array<Project> = [
   },
   {
     title: "WeatherApp",
-    description: "this is games Center",
+    description: "WeatherApp with search hints(free Api doesn`t work well).",
     link: "https://weatherapp-ds.netlify.app/",
     githubLink: "https://github.com/StasinskiPL/WeatherApp",
     image: WeatherAppImg,
@@ -38,7 +38,7 @@ export const projectsList: Array<Project> = [
   },
   {
     title: "Expense Tracker",
-    description: "this is games Center",
+    description: "Expense Tracker, my first React App, actually renovated with bootstap. ",
     link: "https://github.com/StasinskiPL/GamesCenter",
     githubLink: "https://github.com/StasinskiPL/ExpenseTracker-react",
     image: ExpensTrackerImg,
