@@ -7,7 +7,8 @@ interface Props{
         description: string;
         link: string;
         githubLink: string;
-        image:string
+        image:string;
+        detailsImages:Array<string>;
     }
 }
 

@@ -9,6 +9,7 @@ interface Props {
     link: string;
     githubLink: string;
     image: string;
+    detailsImages:Array<string>;
   };
   originPosition: {
     x: Number;

@@ -2,6 +2,7 @@ import React, {useRef, useEffect} from 'react'
 import {gsap} from "gsap"
 import Smartphone from './Smartphone';
 
+
 interface Props{
     project: {
         title: string;
@@ -9,11 +10,12 @@ interface Props{
         link: string;
         githubLink: string;
         image: string;
+        detailsImages:Array<string>;
       };
     }
 
 const ProjectDetailsBody:React.FC<Props> = ({project}) => {
-    const{title,description,githubLink,link} =project;
+    const{title,description,githubLink,link,detailsImages} =project;
 
     const bodyRef = useRef<HTMLDivElement>(null!);
 
@@ -37,7 +39,7 @@ const ProjectDetailsBody:React.FC<Props> = ({project}) => {
     return (
         <div className="projectDetails__body">
         <div className="projectDetails__body-image">
-            <Smartphone link ={link}/>
+            <Smartphone images={detailsImages}/>
         </div>
         <div ref={bodyRef} className="projectDetails__body-info">
             <h1>{title}</h1>
