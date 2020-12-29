@@ -1,10 +1,14 @@
 .projects {
   background-color: $color-main;
+  padding: 5rem 0;
+  @include deskopSize(){
+    padding: 0rem 0rem;
+  }
 
   &__center {
     @include maxWidth;
     min-height: 100vh;
-    padding: 3rem 0 5rem 0;
+    padding: 5rem 0;
     display: grid;
   }
 

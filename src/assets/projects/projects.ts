@@ -15,7 +15,7 @@ interface Project {
 export const projectsList: Array<Project> = [
   {
     title: "GamesCenter",
-    description: "A few Two players online mini games with real time chat. Created with React and socket.io ",
+    description: "A few two players online mini games with real time chat. Created with React and socket.io ",
     link: "https://gamescenter-ds.herokuapp.com/",
     githubLink: "https://github.com/StasinskiPL/GamesCenter",
     image: GamesCenterImg,
