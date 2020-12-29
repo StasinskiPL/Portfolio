@@ -9,7 +9,7 @@ interface Props {
     link: string;
     githubLink: string;
     image: string;
-    detailsImages:Array<string>;
+    detailsImages: Array<string>;
   };
   originPosition: {
     x: Number;
@@ -36,12 +36,11 @@ const ProjectDetails: React.FC<Props> = ({
       transformOrigin: `${originX}px ${originy}px`,
       ease: Power1.easeOut,
     });
-    gsap.from(".backdrop",{
-      duration:1,
-      opacity:0,
+    gsap.from(".backdrop", {
+      duration: 1,
+      opacity: 0,
       ease: Power1.easeOut,
-
-    })
+    });
   });
 
   const clickHandler: Function = () => {
@@ -49,21 +48,21 @@ const ProjectDetails: React.FC<Props> = ({
     gsap.to(detailsRef.current, {
       visibility: "hidden",
     });
-        closeModal();
+    closeModal();
   };
 
   return (
     <>
-    {/* backdrop css in base */}
-    <div className="backdrop"></div>
-    <div ref={detailsRef} className="projectDetails">
-      <div className="projectDetails__center">
-        <div className="projectDetails__header">
-          <FaTimes onClick={() => clickHandler()} />
+      {/* backdrop css in base */}
+      <div className="backdrop"></div>
+      <div ref={detailsRef} className="projectDetails">
+        <div className="projectDetails__center">
+          <div className="projectDetails__header">
+            <FaTimes onClick={() => clickHandler()} />
+          </div>
+          <ProjectDetailsBody project={project} />
         </div>
-      <ProjectDetailsBody project={project}/>
       </div>
-    </div>
     </>
   );
 };

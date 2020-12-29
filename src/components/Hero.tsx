@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-// import { FaArrowDown } from "react-icons/fa";
 import { gsap, Power2 } from "gsap";
 import HeroPhoto from "./HeroPhoto";
 
@@ -31,7 +30,7 @@ const Hero: React.FC = () => {
             <span className="hero__content-name">Dawid</span>
             <span className="hero__content-lastName"> Stasiński</span>
           </div>
-          <HeroPhoto/>
+          <HeroPhoto />
         </div>
       </div>
     </section>
