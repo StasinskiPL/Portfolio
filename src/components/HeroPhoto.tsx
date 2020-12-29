@@ -34,11 +34,11 @@ const HeroPhoto: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    let interval:any;
+    let interval: any;
     if (showAbout) {
       let i = 0;
       let first = true;
-       interval = setInterval(() => {
+      interval = setInterval(() => {
         i++;
         if (first) {
           const text = aboutTextFirst.substring(0, i);
@@ -57,7 +57,7 @@ const HeroPhoto: React.FC = () => {
         }
       }, 60);
     }
-    return ()=> clearInterval(interval)
+    return () => clearInterval(interval);
   }, [showAbout]);
 
   const clickHandler = () => {
@@ -85,11 +85,11 @@ const HeroPhoto: React.FC = () => {
         .then(() => {
           setshowAbout(true);
         });
-        gsap.to(btnRef.current,{
-          opacity:1,
-          duration:0.5,
-          delay:2.5,
-        })
+      gsap.to(btnRef.current, {
+        opacity: 1,
+        duration: 0.5,
+        delay: 2.5,
+      });
     }
   };
 
@@ -103,10 +103,10 @@ const HeroPhoto: React.FC = () => {
         opacity: 0,
         duration: 0.5,
       });
-      gsap.to(btnRef.current,{
-        opacity:0,
-        duration:0.5,
-      })
+      gsap.to(btnRef.current, {
+        opacity: 0,
+        duration: 0.5,
+      });
       gsap
         .to(dialogue.current.firstElementChild, {
           opacity: 0,
@@ -117,7 +117,7 @@ const HeroPhoto: React.FC = () => {
           setAboutText("");
         });
     }
-   
+
     gsap.to(dialogue.current, {
       visibility: "hidden",
       delay: 0.5,
@@ -126,7 +126,12 @@ const HeroPhoto: React.FC = () => {
 
   return (
     <div ref={imageRef} className="hero-imageBox">
-      <img loading="lazy" className="hero-image" src={HeroImg} alt="profilImage" />
+      <img
+        loading="lazy"
+        className="hero-image"
+        src={HeroImg}
+        alt="profilImage"
+      />
       <div ref={dialogue} className="about">
         <div className="about-context">
           {aboutText}

@@ -27,7 +27,12 @@ const Smartphone: React.FC<Props> = ({ images }) => {
   const renderSlides = images.map((image, index) => {
     return (
       <SwiperSlide key={index}>
-        <img loading="lazy" className="smartphone-img" src={image} alt="projectImage" />
+        <img
+          loading="lazy"
+          className="smartphone-img"
+          src={image}
+          alt="projectImage"
+        />
       </SwiperSlide>
     );
   });

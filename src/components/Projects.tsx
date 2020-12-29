@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { projectsList } from "../assets/projects/projects";
 import { gsap, Power3 } from "gsap";
-import {ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Project from "./Project";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,12 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects: React.FC = () => {
   useEffect(() => {
     gsap.to(".project", {
-      scrollTrigger:".project",
+      scrollTrigger: ".project",
       duration: 1,
       opacity: 1,
       y: 0,
       stagger: 0.5,
-      ease:Power3.easeInOut,
+      ease: Power3.easeInOut,
     });
   });
 
