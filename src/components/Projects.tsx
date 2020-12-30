@@ -12,8 +12,7 @@ const Projects: React.FC = () => {
       scrollTrigger: ".project",
       duration: 1,
       opacity: 1,
-      y: 0,
-      stagger: 0.5,
+      stagger: 0.3,
       ease: Power3.easeInOut,
     });
   });

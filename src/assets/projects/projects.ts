@@ -21,7 +21,7 @@ export const projectsList: Array<Project> = [
     title: "GamesCenter",
     description:
       "A few two players online mini games with real time chat. Created with React and socket.io ",
-    link: "https://gamescenter-ds.herokuapp.com/",
+    link: "https://gamescenter-ds.herokuapp.com",
     githubLink: "https://github.com/StasinskiPL/GamesCenter",
     image: GamesCenterImg,
     detailsImages: gamesCenterImages,
@@ -30,7 +30,7 @@ export const projectsList: Array<Project> = [
     title: "Library",
     description:
       "Online Library. Created with React , firebase and firebase Authentication.",
-    link: "https://miejska-biblioteka.netlify.app/",
+    link: "https://miejska-biblioteka.netlify.app",
     githubLink: "https://github.com/StasinskiPL/Biblioteka",
     image: LibraryImg,
     detailsImages: libraryImages,
@@ -38,7 +38,7 @@ export const projectsList: Array<Project> = [
   {
     title: "WeatherApp",
     description: "WeatherApp with search hints(free Api doesn`t work well).",
-    link: "https://weatherapp-ds.netlify.app/",
+    link: "https://weatherapp-ds.netlify.app",
     githubLink: "https://github.com/StasinskiPL/WeatherApp",
     image: WeatherAppImg,
     detailsImages: weatherAppImages,
@@ -47,7 +47,7 @@ export const projectsList: Array<Project> = [
     title: "Expense Tracker",
     description:
       "Expense Tracker, my first React App, actually renovated with bootstap. ",
-    link: "https://github.com/StasinskiPL/GamesCenter",
+    link: "https://expensetracker-ds.netlify.app",
     githubLink: "https://github.com/StasinskiPL/ExpenseTracker-react",
     image: ExpensTrackerImg,
     detailsImages: expenseTrackerImages,

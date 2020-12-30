@@ -5,7 +5,7 @@ import { gsap, Power4 } from "gsap";
 const aboutTextFirst =
   "I am Dawid, 19, from Silesia Poland. I am an aspiring Front-End Developer.";
 const aboutTextSecond =
-  "I started my path to becoming a programmer in May 2020 in Java, but after two months I migrated to Front-End.";
+  "I started my path to becoming a programmer in May 2020 with Java, but after two months I migrated to Front-End.";
 
 const HeroPhoto: React.FC = () => {
   const [showAbout, setshowAbout] = useState<boolean>(false);
@@ -40,10 +40,11 @@ const HeroPhoto: React.FC = () => {
       let first = true;
       interval = setInterval(() => {
         i++;
+
         if (first) {
           const text = aboutTextFirst.substring(0, i);
           setAboutText(text);
-          if (i === aboutTextFirst.length + 17) {
+          if (i === aboutTextFirst.length + 15) {
             i = 0;
             setAboutText("");
             first = false;
@@ -61,6 +62,7 @@ const HeroPhoto: React.FC = () => {
   }, [showAbout]);
 
   const clickHandler = () => {
+    window.scrollTo(0,0);
     gsap.to(dialogue.current, {
       visibility: "visible",
     });
