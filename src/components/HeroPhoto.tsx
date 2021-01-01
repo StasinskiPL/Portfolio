@@ -3,9 +3,9 @@ import HeroImg from "../assets/images/HeroImage.svg";
 import { gsap, Power4 } from "gsap";
 
 const aboutTextFirst =
-  "I am Dawid, 19, from Silesia Poland. I am an aspiring Front-End Developer.";
+  "I am Dawid, 19. I am an aspiring coder.";
 const aboutTextSecond =
-  "I started my path to becoming a programmer in May 2020 with Java, but after two months I migrated to Front-End.";
+  "I consider myself as self-taught developer with passion to Front-End.";
 
 const HeroPhoto: React.FC = () => {
   const [showAbout, setshowAbout] = useState<boolean>(false);
@@ -18,14 +18,22 @@ const HeroPhoto: React.FC = () => {
 
   useEffect(() => {
     if (imageRef.current) {
+      gsap.to(imageRef.current,{
+        visibility: "visible",
+      })
+      gsap.to(imageRef.current.lastElementChild,{
+        visibility:"visible",
+        delay: 2,
+      })
+      
       gsap.from(imageRef.current.firstElementChild, {
-        duration: 3,
+        duration: 4,
         opacity: 0,
         ease: Power4.easeIn,
         transformOrigin: "top left",
       });
       gsap.from(imageRef.current.lastElementChild, {
-        duration: 1,
+        duration: 2,
         delay: 2,
         opacity: 0,
         ease: Power4.easeOut,
@@ -149,7 +157,7 @@ const HeroPhoto: React.FC = () => {
         <div ref={circle2} className="circle2"></div>
       </div>
       <button onClick={clickHandler} className="hero-image-btn">
-        Tell me Something
+        About Me
       </button>
     </div>
   );

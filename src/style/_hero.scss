@@ -62,6 +62,11 @@
         display: flex;
         top: 23%;
         align-items: center;
+        visibility: hidden;
+
+
+
+
         right: 0;
         max-height: 100%;
         flex-direction: column;
@@ -76,6 +81,7 @@
         max-height: 500px;
         width: 100%;
 
+
         @include deskopSize() {
             width: initial;
         }
@@ -88,6 +94,7 @@
             border: transparent;
             font-family: inherit;
             color: $color-text;
+            visibility: hidden;
             font-size: 1.5rem;
             background-color: $color-main;
             cursor: pointer;
