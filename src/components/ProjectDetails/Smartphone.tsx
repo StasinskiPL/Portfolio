@@ -14,6 +14,8 @@ interface Props {
 
 const Smartphone: React.FC<Props> = ({ images }) => {
   const smartphoneRef = useRef<HTMLDivElement>(null!);
+  const next = useRef<HTMLDivElement>(null!);
+  const prev = useRef<HTMLDivElement>(null!);
   useEffect(() => {
     gsap.from(smartphoneRef.current, {
       duration: 1.5,
@@ -22,6 +24,12 @@ const Smartphone: React.FC<Props> = ({ images }) => {
       y: -50,
       ease: Power3.easeInOut,
     });
+    gsap.to([next.current,prev.current],{
+      opacity:1,
+      delay:0.5,
+      duration:2,
+      ease: Power3.easeInOut,
+    })
   });
 
   const renderSlides = images.map((image, index) => {
@@ -54,10 +62,10 @@ const Smartphone: React.FC<Props> = ({ images }) => {
           />
         </div>
       </div>
-      <div className="smartphone-nav smartphone-next">
+      <div ref={next} className="smartphone-nav smartphone-next">
         <FaArrowRight />
       </div>
-      <div className=" smartphone-nav smartphone-prev">
+      <div ref={prev} className=" smartphone-nav smartphone-prev">
         <FaArrowLeft />
       </div>
     </>
