@@ -3,9 +3,9 @@ import HeroImg from "../assets/images/HeroImage.svg";
 import { gsap, Power4 } from "gsap";
 
 const aboutTextFirst =
-  "I am Dawid, 19. I am an aspiring coder.";
+  "I am Dawid, 19. I am an aspiring Front-End Developer.";
 const aboutTextSecond =
-  "I consider myself as self-taught developer with passion to Front-End.";
+  "I live in Silesia, where also I study Computer Science.";
 
 const HeroPhoto: React.FC = () => {
   const [showAbout, setshowAbout] = useState<boolean>(false);

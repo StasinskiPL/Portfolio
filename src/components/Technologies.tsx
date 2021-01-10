@@ -1,4 +1,3 @@
-import React from "react";
 import { skills } from "../assets/skills/skills";
 import Skill from "./Skill";
 

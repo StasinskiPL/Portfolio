@@ -2,10 +2,12 @@ import GamesCenterImg from "../images/gamesCenter.png";
 import LibraryImg from "../images/library.png";
 import WeatherAppImg from "../images/WeatherApp.png";
 import ExpensTrackerImg from "../images/expenseTracker.png";
+import EcommerceImg from "../images/ecommerce.png";
 import libraryImages from "../images/libraryImages";
 import gamesCenterImages from "../images/gamesCenterImages";
 import weatherAppImages from "../images/weatherAppImages";
 import expenseTrackerImages from "../images/expenseTrackerImages";
+import ecommerceImages from "../images/ecommerce";
 
 interface Project {
   title: string;
@@ -17,6 +19,15 @@ interface Project {
 }
 
 export const projectsList: Array<Project> = [
+  {
+    title: "Ecommerce",
+    description:
+      "My latest and probably the biggest project, created with React, firebase authentication, redux, mongodb and a little bit of nodeJs.",
+    link: "https://ds-ecommerce.netlify.app",
+    githubLink: "https://github.com/StasinskiPL/e-commerce",
+    image: EcommerceImg,
+    detailsImages: ecommerceImages,
+  },
   {
     title: "GamesCenter",
     description:

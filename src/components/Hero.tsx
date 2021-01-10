@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
 
     gsap.to(textRef.current, {
       duration: 1,
-      textShadow: "-6px -6px rgba(241, 241, 230, 0.1)",
+      textShadow: "-4px -4px rgba(241, 241, 230, 0.1)",
       delay: 2,
       ease: Power2.easeInOut,
       stagger: 1,

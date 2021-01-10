@@ -2,13 +2,14 @@
 
 
 $color-main-light:#E3F0FF;
-$color-main:#414B62;
-$color-main-dark: #141f33;
+$color-main:#F8ECDE;
+$color-main-dark: #ccbca9;
 $color-light-black: #363636;
 $color-light-black-2:#4D4F54;
 $color-light-black-3:#656565;
 $color-white: #fafaff;
-$color-text:#F1F1E6;
+$color-text:#f8f8f4;
+$color-text-dark:#242424;
 
 
 $mediumSize: 776px;
@@ -34,11 +35,13 @@ body {
 }
 
 .backdrop{
+    visibility: hidden;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    opacity: 0;
     background-color: rgba(0,0,0, 0.6);
 }
 

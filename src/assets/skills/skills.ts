@@ -3,8 +3,7 @@ import cssimg from "./css.svg";
 import javascriptImg from "./javascript.svg";
 import typescriptImg from "./typescript.svg";
 import bootstrap5Img from "./bootstrap5.svg";
-import githubImg from "./github.svg";
-import nodejsImg from "./nodejs.svg";
+// import nodejsImg from "./nodejs.svg";
 import reactImg from "./react.svg";
 import reduxImg from "./redux.svg";
 import sassImg from "./sass.svg";
@@ -43,14 +42,10 @@ export const skills: Array<skill> = [
     name: "Redux",
     img: reduxImg,
   },
-  {
-    name: "NodeJs",
-    img: nodejsImg,
-  },
-  {
-    name: "Github",
-    img: githubImg,
-  },
+  // {
+  //   name: "NodeJs",
+  //   img: nodejsImg,
+  // },
   {
     name: "Bootstrap",
     img: bootstrap5Img,

@@ -48,7 +48,7 @@ const ProjectDetailsBody: React.FC<Props> = ({ project }) => {
         <p>{description}</p>
         <div className="projectDetails__body-infoLinks">
           <a href={link} target="blank">
-            LiveDemo
+            Live
           </a>
           <a href={githubLink} target="blank">
             Code

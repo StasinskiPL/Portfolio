@@ -18,14 +18,11 @@ interface Props {
   closeModal: () => void;
 }
 
-const ProjectDetails: React.FC<Props> = ({
-  project,
-  originPosition,
-  closeModal,
-}) => {
+const ProjectDetails: React.FC<Props> = ({project,originPosition,closeModal}) => {
   const originX = originPosition ? originPosition.x : "center";
   const originy = originPosition ? originPosition.y : "center";
   const detailsRef = useRef<HTMLDivElement>(null!);
+  const backdropRef = useRef<HTMLDivElement>(null!);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -36,9 +33,10 @@ const ProjectDetails: React.FC<Props> = ({
       transformOrigin: `${originX}px ${originy}px`,
       ease: Power1.easeOut,
     });
-    gsap.from(".backdrop", {
+    gsap.to(backdropRef.current, {
+      visibility:"visible",
       duration: 1,
-      opacity: 0,
+      opacity: 1,
       ease: Power1.easeOut,
     });
   });
@@ -54,7 +52,7 @@ const ProjectDetails: React.FC<Props> = ({
   return (
     <>
       {/* backdrop css in base */}
-      <div className="backdrop"></div>
+      <div ref={backdropRef} className="backdrop"></div>
       <div ref={detailsRef} className="projectDetails">
         <div className="projectDetails__center">
           <div className="projectDetails__header">

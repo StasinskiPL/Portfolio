@@ -1,7 +1,6 @@
 .footer {
-    border-top: 1px solid rgba($color-main, 0.25);
-    background-color: $color-main-dark;
-
+    background-image: linear-gradient(to bottom, #ccbca9, #b19d96, #908183, #6d686c, #4f4f4f);
+   
     &__center {
         @include maxWidth;
         min-height: 40vh;
@@ -13,8 +12,6 @@
             grid-template-columns: 70% 30%;
         }
     }
-
-    &-left {}
 
     &-right {
         display: flex;
@@ -39,12 +36,13 @@
             display: flex;
             align-items: flex-end;
             transition: color 0.3s;
-            color: $color-white;
+            color: $color-text;
+
             cursor: pointer;
 
             &:hover,
             &:focus {
-                color: rgb(138, 138, 138);
+                color: rgb(204, 200, 200);
             }
 
             &-icon {
@@ -66,12 +64,12 @@
         &-link {
             font-size: 2.5rem;
             margin: 1rem;
-            color: $color-white;
+            color: $color-text;
             transition: all 0.3s;
 
             &:hover,
             &:focus {
-                color: rgb(138, 138, 138);
+                color: rgb(168, 168, 168);
             }
         }
     }

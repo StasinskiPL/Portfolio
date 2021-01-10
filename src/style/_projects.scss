@@ -1,7 +1,8 @@
 .projects {
   background-color: $color-main;
-  padding: 5rem 0;
-  @include deskopSize(){
+  padding: 5rem 0rem;
+
+  @include deskopSize() {
     padding: 0rem 0rem;
   }
 
@@ -9,7 +10,7 @@
     @include maxWidth;
     min-height: 100vh;
     padding: 5rem 0;
-    display: grid;
+    overflow: hidden;
   }
 
   &-title {
@@ -50,10 +51,7 @@
 .project {
   display: flex;
   justify-content: center;
-  position: relative;
   opacity: 0;
-  transform: translateY(-40px);
-  overflow: hidden;
 
   @include mediumSize() {
     position: initial;
@@ -61,11 +59,11 @@
 
   &__center {
     position: relative;
-    max-width: 350px;
+    overflow: hidden;
     width: 100%;
+    max-width: 350px;
     height: 350px;
     border-radius: 0.5rem;
-    overflow: hidden;
     cursor: pointer;
   }
 
@@ -73,7 +71,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-color: $color-main-light;
+    transition: all 0.5s;
     filter: brightness(0.4);
   }
 
@@ -83,69 +81,56 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 0.5rem;
     display: grid;
     place-items: center;
-    backdrop-filter: blur(0px);
     color: $color-white;
-    transition: all 0.5s ease-in-out;
+    text-align: center;
+    backdrop-filter:blur(0px);
+    transition: all 0.3s;
 
+    &:hover,&:focus {
+    backdrop-filter:blur(5px);
+
+      .project__info-subtext {
+        transform: scale(1);
+      }
+    }
 
     &-text {
       font-size: 2.5rem;
       font-style: italic;
-      margin-bottom: 0rem;
-      text-align: center;
     }
-    &-subtext{
-      margin-top: 0rem;
-      text-align: center;
-      transition: all 0.5s ease-in-out;
+
+    &-subtext {
+      transition: all 0.5s;
       transform: scale(0);
     }
   }
 }
 
-.project:hover .project__info,
-.project:focus .project__info {
-  backdrop-filter: blur(7px);
-}
-
-.project:hover .project__info-subtext,
-.project:focus .project__info-subtext {
-  transform: scale(1);
-}
 
 .projectDetails {
   position: fixed;
   visibility: hidden;
-  top: 5%;
+  top: 2%;
   left: 2%;
   transform: scale(0);
   width: 96%;
-  height: 80%;
+  height: 100%;
   max-height: 95vh;
   z-index: 10000;
   display: grid;
   place-items: center;
-  outline: 1px solid transparent;
-
-  @include mediumSize() {
-    top:2%;
-    left: 1%;
-    width: 98%;
-    height: 100%;
-  }
-
+ 
   &__center {
     @include maxWidth;
     background-color: $color-light-black;
-    height: 100%;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
     border-radius: 1rem;
+    overflow: hidden;
     max-height: 850px;
-   
-
   }
 
   &__header {
@@ -179,16 +164,16 @@
       @include mediumSize() {
         display: grid;
         place-items: center;
-        
+
       }
     }
 
     &-info {
-      max-height: 800px;
-      border-top-left-radius: 1rem;
-      background-color: $color-light-black-2;
+      height: 100%;
       padding: 1rem;
+      border-top-left-radius: 1rem;
       color: $color-text;
+      background-color: $color-light-black-2;
       display: grid;
       grid-template-rows: auto 1fr auto;
 
@@ -196,23 +181,27 @@
         font-size: 2rem;
         border-bottom: 1px solid $color-light-black;
       }
+
       p {
         margin-top: 1rem;
         font-size: 1.5rem;
         font-weight: 400;
       }
     }
+
     &-infoLinks {
       padding: 1rem;
       color: $color-text;
       display: flex;
       justify-content: space-between;
+
       a {
         color: $color-text;
         font-size: 2rem;
         transition: color 0.3s;
+
         &:hover {
-          color: darken($color-text, 40);
+          color: #aaa;
         }
       }
     }
