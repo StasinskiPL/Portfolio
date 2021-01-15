@@ -53,14 +53,14 @@ const ProjectDetails: React.FC<Props> = ({project,originPosition,closeModal}) =>
     <>
       {/* backdrop css in base */}
       <div ref={backdropRef} className="backdrop"></div>
-      <div ref={detailsRef} className="projectDetails">
+      <article ref={detailsRef} className="projectDetails">
         <div className="projectDetails__center">
           <div className="projectDetails__header">
             <FaTimes onClick={() => clickHandler()} />
           </div>
           <ProjectDetailsBody project={project} />
         </div>
-      </div>
+      </article>
     </>
   );
 };

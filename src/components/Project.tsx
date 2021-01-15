@@ -31,8 +31,8 @@ const Project: React.FC<Props> = ({ project }) => {
           <img loading="lazy" className="project-image" src={image} alt="" />
           <div className="project__info">
             <div>
-              <h1 className="project__info-text">{title}</h1>
-              <h3 className="project__info-subtext">Show More</h3>
+              <h3 className="project__info-text">{title}</h3>
+              <h4 className="project__info-subtext">Show More</h4>
             </div>
           </div>
         </div>

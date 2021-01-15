@@ -28,6 +28,8 @@
 
   &__content {
     &-text {
+      h1{
+
       color: $color-text;
       text-transform: uppercase;
       font-weight: 900;
@@ -53,6 +55,8 @@
         color: $color-text-dark;
       }
     }
+  }
+
 
     &-name {
       display: block;

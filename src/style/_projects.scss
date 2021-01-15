@@ -20,14 +20,14 @@
     font-style: italic;
     text-transform: uppercase;
     text-align: center;
-    color: $color-text;
 
     @include mediumSize() {
       font-size: 5rem;
     }
 
-    h1 {
-      -webkit-text-stroke: 3px $color-light-black;
+    h2 {
+      -webkit-text-stroke: 3px #000;
+      color:#4f4d4b;
     }
   }
 
@@ -177,7 +177,7 @@
       display: grid;
       grid-template-rows: auto 1fr auto;
 
-      h1 {
+      h3 {
         font-size: 2rem;
         border-bottom: 1px solid $color-light-black;
       }

@@ -44,7 +44,7 @@ const ProjectDetailsBody: React.FC<Props> = ({ project }) => {
         <Smartphone images={detailsImages} />
       </div>
       <div ref={bodyRef} className="projectDetails__body-info">
-        <h1>{title}</h1>
+        <h3>{title}</h3>
         <p>{description}</p>
         <div className="projectDetails__body-infoLinks">
           <a href={link} target="blank">

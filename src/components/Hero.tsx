@@ -22,13 +22,17 @@ const Hero: React.FC = () => {
       stagger: 1,
     });
   }, []);
+
+
   return (
     <section className="hero">
       <div className="hero__center">
         <div className="hero__content">
-          <div ref={textRef} className="hero__content-text">
+          <div  className="hero__content-text">
+            <h1 ref={textRef}>
             <span className="hero__content-name">Dawid</span>
             <span className="hero__content-lastName"> Stasiński</span>
+            </h1>
           </div>
           <HeroPhoto />
         </div>

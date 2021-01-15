@@ -9,10 +9,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects: React.FC = () => {
   useEffect(() => {
     gsap.to(".project", {
-      scrollTrigger: ".project",
+      scrollTrigger:{
+        trigger:".project",
+        start:"250px bottom"
+
+      },
       duration: 1,
       opacity: 1,
       stagger: 0.3,
+
     });
   });
 
@@ -23,7 +28,7 @@ const Projects: React.FC = () => {
     <section className="projects">
       <div className="projects__center">
         <div className="projects-title">
-          <h1>Projects</h1>
+          <h2>Projects</h2>
         </div>
         <div className="projects__context">{renderProjects}</div>
       </div>
