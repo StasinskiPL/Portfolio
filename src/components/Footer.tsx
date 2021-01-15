@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className="footer__center">
         <div className="footer-left"></div>
         <div className="footer-right">
-          <h1> Contact:</h1>
+          <h3> Contact:</h3>
           <p onClick={emailClickHandler} className="footer-right-email">
             01DawidS@gmail.com
             <span className="footer-right-email-icon">
@@ -21,11 +21,13 @@ const Footer: React.FC = () => {
           </p>
 
           <div className="footer-right-links">
-            <a href="https://github.com/StasinskiPL" target="blank">
+            <a href="https://github.com/StasinskiPL" aria-label="Github" target="blank" >
+            
               <AiOutlineGithub className="footer-right-link" />
             </a>
             <a
               href="https://www.facebook.com/dawid.stasinski.585"
+              aria-label="Facebook"
               target="blank"
             >
               <FaFacebook className="footer-right-link" />

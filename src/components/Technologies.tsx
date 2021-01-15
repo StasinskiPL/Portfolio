@@ -10,7 +10,7 @@ const Technologies: React.FC = () => {
     <section className="tech">
       <div className="tech__center">
         <div className="tech-title">
-          <h1>Skills</h1>
+          <h2>Skills</h2>
         </div>
         <div className="tech__context">{renderedSkills}</div>
       </div>

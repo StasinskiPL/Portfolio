@@ -144,7 +144,9 @@ const HeroPhoto: React.FC = () => {
       />
       <div ref={dialogue} className="about">
         <div className="about-context">
+          <p>
           {aboutText}
+          </p>
           <button
             ref={btnRef}
             onClick={btnClickHandler}
