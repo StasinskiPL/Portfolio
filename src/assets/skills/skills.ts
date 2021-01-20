@@ -4,6 +4,7 @@ import javascriptImg from "./javascript.svg";
 import typescriptImg from "./typescript.svg";
 import bootstrap5Img from "./bootstrap5.svg";
 // import nodejsImg from "./nodejs.svg";
+import gatsby from "./gatsby.svg";
 import reactImg from "./react.svg";
 import reduxImg from "./redux.svg";
 import sassImg from "./sass.svg";
@@ -46,6 +47,10 @@ export const skills: Array<skill> = [
   //   name: "NodeJs",
   //   img: nodejsImg,
   // },
+  {
+    name: "Gatsby",
+    img: gatsby,
+  },
   {
     name: "Bootstrap",
     img: bootstrap5Img,
