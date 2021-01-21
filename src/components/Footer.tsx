@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <div className="footer-right">
           <h3> Contact:</h3>
           <p onClick={emailClickHandler} className="footer-right-email">
-            01DawidS@gmail.com
+            stasinski01@gmail.com
             <span className="footer-right-email-icon">
               <HiOutlineClipboardCopy />
             </span>
