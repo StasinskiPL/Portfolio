@@ -103,7 +103,8 @@ const HeroPhoto: React.FC = () => {
     }
   };
 
-  const btnClickHandler = () => {
+  const closeHandler = () => {
+    document.getElementById("projects")?.scrollIntoView()
     if (dialogue.current) {
       gsap.to(circle2.current, {
         opacity: 0,
@@ -149,7 +150,7 @@ const HeroPhoto: React.FC = () => {
           </p>
           <button
             ref={btnRef}
-            onClick={btnClickHandler}
+            onClick={closeHandler}
             className="about-context-btn"
           >
             ok

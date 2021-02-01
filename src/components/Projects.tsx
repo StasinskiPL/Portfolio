@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
     <Project key={index} project={project} />
   ));
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="projects__center">
         <div className="projects-title">
           <h2>Projects</h2>
