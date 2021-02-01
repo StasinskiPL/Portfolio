@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { projectsList } from "../assets/projects/projects";
 import { gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,19 +6,6 @@ import Project from "./Project";
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects: React.FC = () => {
-  useEffect(() => {
-    gsap.to(".project", {
-      scrollTrigger:{
-        trigger:".project",
-        start:"250px bottom"
-
-      },
-      duration: 1,
-      opacity: 1,
-      stagger: 0.3,
-
-    });
-  });
 
   const renderProjects = projectsList.map((project, index) => (
     <Project key={index} project={project} />

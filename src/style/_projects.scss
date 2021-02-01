@@ -51,7 +51,6 @@
 .project {
   display: flex;
   justify-content: center;
-  opacity: 0;
 
   @include mediumSize() {
     position: initial;
