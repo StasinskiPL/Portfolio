@@ -17,6 +17,8 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+       
+
 
         @include mediumSize() {
             padding-left: 5rem;
@@ -30,27 +32,43 @@
             color: $color-white;
             font-style: italic;
         }
+        &-copyInfo{
+            background-color: $color-light-black;
+            border-radius: 0.3rem;
+            color: white;
+            h4{
+                padding: 0.5rem;
+            }
+        }
 
         &-email {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            @include btn;
+            font-weight: bold;
             position: relative;
             display: flex;
-            align-items: flex-end;
             transition: color 0.3s;
             color: $color-text;
-
             cursor: pointer;
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
+                outline: 0px;
+                border-width: 0px;
                 color: rgb(204, 200, 200);
             }
 
+
             &-icon {
                 padding-left: 1rem;
-                font-size: 1.25rem;
-                svg {
+                font-size: 1rem;
+                svg{
+                    margin-top: -2px;
                     vertical-align: middle;
                 }
+                
             }
         }
 
